@@ -1,0 +1,158 @@
+/* Integral CF Font Declarations (Local system font + local files + fallback) */
+@font-face {
+  font-family: 'Integral CF';
+  src: local('Integral CF Bold'),
+       local('IntegralCF-Bold'),
+       local('Integral CF Heavy'),
+       local('IntegralCF-Heavy'),
+       local('Integral CF Extra Bold'),
+       local('IntegralCF-ExtraBold'),
+       local('Integral CF'),
+       url('../fonts/IntegralCF-Bold.woff2') format('woff2'),
+       url('../fonts/IntegralCF-Bold.ttf') format('truetype'),
+       url('../fonts/IntegralCF-Bold.otf') format('opentype'),
+       url('../fonts/IntegralCF-Heavy.woff2') format('woff2'),
+       url('../fonts/IntegralCF-Heavy.ttf') format('truetype'),
+       url('../fonts/IntegralCF-ExtraBold.woff2') format('woff2'),
+       url('../fonts/IntegralCF-ExtraBold.ttf') format('truetype'),
+       url('../fonts/Integral-CF-Bold.woff2') format('woff2'),
+       url('../fonts/Integral-CF-Bold.ttf') format('truetype'),
+       url('../fonts/CabinetGrotesk-Black.woff2') format('woff2');
+  font-weight: 700 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cabinet Grotesk';
+  src: url('../fonts/CabinetGrotesk-Black.woff2') format('woff2'),
+       url('https://cdn.fontshare.com/wf/54BYDK52GK4J6SPDN2E656FIZHUETKL3/ACYE4XDNEUAHIOQEOGPYPDVAVDI5P67Q/TZVUWRP4UW5PEJWBLXHG5VVGPODI2WLC.woff2') format('woff2');
+  font-weight: 800 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+/* Satoshi Font Declarations (Local + HTTPS CDN Fallback) */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Variable.woff2') format('woff2-variations'),
+       url('../fonts/Satoshi-Variable.woff2') format('woff2'),
+       url('https://cdn.fontshare.com/wf/NWBQYJIM7GCZ5XWD7D26ARB3VDY55ZRT/K63EV2KZIGKLE7RANQ2U42S6SVHU5RJ7/X6XYTKIVDUW7GZTZPZNN4EUM5KH54KHF.woff2') format('woff2');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Light.woff2') format('woff2'),
+       url('https://cdn.fontshare.com/wf/D7WD5OXZFWQ5T76HSPWAC7MNKAJXE2YG/LUGNSPO5YC34ABNB2O6K7AFDSOJZT56V/WNDVG7O66ENLOD43GS7FBUCC4KMT5OM2.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Regular.woff2') format('woff2'),
+       url('https://cdn.fontshare.com/wf/TTX2Z3BF3P6Y5BQT3IV2VNOK6FL22KUT/7QYRJOI3JIMYHGY6CH7SOIFRQLZOLNJ6/KFIAZD4RUMEZIYV6FQ3T3GP5PDBDB6JY.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Medium.woff2') format('woff2'),
+       url('https://cdn.fontshare.com/wf/P2LQKHE6KA6ZP4AAGN72KDWMHH6ZH3TA/ZC32TK2P7FPS5GFTL46EU6KQJA24ZYDB/7AHDUZ4A7LFLVFUIFSARGIWCRQJHISQP.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Bold.woff2') format('woff2'),
+       url('https://cdn.fontshare.com/wf/LAFFD4SDUCDVQEXFPDC7C53EQ4ZELWQI/PXCT3G6LO6ICM5I3NTYENYPWJAECAWDD/GHM6WVH6MILNYOOCXHXB5GTSGNTMGXZR.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../fonts/Satoshi-Black.woff2') format('woff2'),
+       url('https://cdn.fontshare.com/wf/NHPGVFYUXYXE33DZ75OIT4JFGHITX5PE/PSUTMASCDJTVPERDYJZPN23BVUFUCQIF/J64QX5IPOHK56I2KYUNBQ5M2XWZEYKYX.woff2') format('woff2');
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-primary: #000000;
+  --color-surface: #f0f0f0;
+  --color-text-primary: #000000;
+  --color-text-muted: rgba(0, 0, 0, 0.6);
+  --color-border: rgba(0, 0, 0, 0.1);
+
+  --font-family-heading: 'Integral CF';
+  --font-family-base: 'Satoshi';
+
+  --font-size-10: 0.625rem;
+  --font-size-12: 0.75rem;
+  --font-size-14: 0.875rem;
+  --font-size-16: 1rem;
+  --font-size-20: 1.25rem;
+  --font-size-24: 1.5rem;
+  --font-size-32: 2rem;
+  --font-size-36: 2.25rem;
+  --font-size-40: 2.5rem;
+  --font-size-48: 3rem;
+  --font-size-64: 4rem;
+
+  --font-hero-title: clamp(2.25rem, 4.5vw + 1rem, 4rem);
+  --font-body: clamp(0.875rem, 1vw + 0.5rem, 1rem);
+
+  --gap-12: 12px;
+  --gap-20: 20px;
+  --gap-24: 24px;
+  --gap-40: 40px;
+  --gap-64: 64px;
+  --gap-106: 106px;
+
+  --padding-24: 24px;
+
+  --radius-20: 20px;
+  --radius-62: 62px;
+  --radius-full: 9999px;
+
+  --container-max-width: 1240px;
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --color-bg-hero: #f2f0f1;
+  --color-bg-card: #F0EEED;
+  --color-bg-newsletter: #000000;
+  --color-text-price-old: rgba(0, 0, 0, 0.4);
+  --color-text-muted-footer: rgba(0, 0, 0, 0.6);
+  --color-border-card: rgba(0, 0, 0, 0.1);
+  --color-subscribe-hover: #F0F0F0;
+  --color-discount-bg: rgba(255, 51, 51, 0.1);
+  --color-discount-text: #FF3333;
+
+  --font-size-29: 1.8125rem;
+  --font-size-33: 2.0625rem;
+  --font-size-34: 2.125rem;
+  --font-size-37: 2.3125rem;
+  --font-size-38: 2.375rem;
+  --font-size-56: 3.5rem;
+  --font-size-57: 3.5625rem;
+
+  --gap-32: 32px;
+  --font-size-15: 0.9375rem;
+  --font-size-18: 1.125rem;
+  --font-size-28: 1.75rem;
+  --font-size-30: 1.875rem;
+}
