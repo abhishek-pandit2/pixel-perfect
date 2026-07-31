@@ -182,7 +182,7 @@
 
 .price-discount-badge {
   font-family: var(--font-family-base);
-  font-size: var(--font-size-16);
+  font-size: var(--font-size-12);
   font-weight: 500;
   color: var(--color-discount-text);
   background-color: var(--color-discount-bg);
@@ -407,22 +407,27 @@
 
 .product-tabs__header {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
   border-bottom: 1px solid var(--color-border);
-  margin-bottom: 25px;
+  margin-bottom: 22px;
 }
 
 .product-tabs__btn {
-  /* flex: 1; */
+  flex: 1;
   text-align: center;
   font-family: var(--font-family-base);
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--color-text-muted);
-  padding-bottom: 14px;
+  padding-bottom: 16px;
   border-bottom: 2px solid transparent;
-  margin-bottom: -1.5px;
+  margin-bottom: -1px;
   transition: color var(--transition-fast), border-color var(--transition-fast);
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  cursor: pointer;
 }
 
 .product-tabs__btn:hover {
@@ -655,7 +660,7 @@
 .reviews-load-more {
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 74px;
 }
 
 .reviews-load-more__btn {
@@ -770,7 +775,7 @@
 
   .product-tabs__btn {
     font-size: 16px;
-    padding-bottom: 12px;
+    padding-bottom: 20px;
   }
 
   .reviews-header__title {
@@ -786,30 +791,59 @@
   }
 
   .review-card {
-    padding: 24px 20px;
+    padding: 23px;
+  }
+
+  .review-card:nth-child(n+4) {
+    display: none;
+  }
+
+  .review-card__header {
+    margin-bottom: 10px;
   }
 
   .review-card__menu-btn {
     display: none; 
   }
 
-  .review-card .review-card__rating .star-icon {
-    width: 16px;
-    height: 16px;
+  .review-card .review-card__rating {
+    gap: 5.36px;
   }
+
+  .review-card .review-card__rating .star-icon {
+    width: 19.19px;
+    height: 19.19px;
+  }
+
+  .review-card__author {
+    padding-top: 0;
+    margin-bottom: 5px;
+    gap: 4px;
+  }
+
+  
 
   .review-card__author-name {
     font-size: 16px;
+    font-weight: 700;
+  }
+
+  .review-card__verified .verified-icon {
+    width: 19.44px;
+    height: 19.44px;
   }
 
   .review-card__text {
     font-size: 14px;
+    line-height: 20px;
     margin-bottom: 16px;
-    line-height: 1.5;
+    max-width: none;
   }
 
   .review-card__date {
     font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
   }
 
   .reviews-header__btn-write {
@@ -847,14 +881,21 @@
   }
       .product-essential {
         padding-top: 19px;
+        margin-bottom: 44px;
       }
 
   .product-gallery {
     gap: 12px;
   }  
 
+  .reviews-header__count{
+    padding-top: 5px;
+  }
   .product-gallery__thumb-btn{
     aspect-ratio: 0;
+  }
+  .product-tabs__btn {
+    padding-bottom: 11px;
   }
   .product-info__title{
     max-width: 254px;
@@ -879,8 +920,9 @@
     gap: 10px;
     margin-bottom: 11px;
   }
-  .price-discount-badge {
+  .product-info__price-box .price-discount-badge {
     font-size: 14px;
+    padding: 3px 11px;
   }
   .product-info__description {
     margin-bottom: 20px;
@@ -921,12 +963,56 @@
   }
   .product-tabs__header {
     margin-bottom: 20px;
+    gap: 45px;
+  }
+  .product-tabs__btn {
+    flex: initial;
   }
   .reviews-header {
-    margin-bottom: 16px;
+    margin-bottom: 19px;
   }
   .reviews-load-more__btn {
-    padding: 12px 24px;
+    padding: 12px 34px;
     font-size: 14px;
+  }
+
+  .reviews-load-more{
+    margin-bottom: 57px;
+  }
+  .reviews-grid{
+    gap: 18px 20px;
+    margin-bottom: 22px;
+  }
+}
+
+.related-products-section {
+  margin-top: 64px;
+  margin-bottom: 166px;
+}
+
+.related-products__title {
+  font-family: var(--font-family-heading);
+  font-size: 54px;
+  font-weight: 800;
+  color: var(--color-black);
+  text-align: center;
+  margin-bottom: 48px;
+  letter-spacing: 1px ;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .related-products-section {
+    margin-top: 50px;
+    margin-bottom: 186px;
+  }
+
+  .related-products__title {
+    font-size: 35px;
+    line-height: 36px;
+    margin-bottom: 33px;
+    max-width: 280px;
+    margin-inline: auto;
   }
 }
