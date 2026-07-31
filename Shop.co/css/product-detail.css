@@ -38,10 +38,13 @@
 
 
 .product-essential {
+  margin-bottom: 71px;
+}
+
+.product-essential__wrapper {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 40px;
-  margin-bottom: 71px;
 }
 
 
@@ -685,7 +688,7 @@
 
 
 @media (max-width: 1200px) {
-  .product-essential {
+  .product-essential__wrapper {
     gap: 20px;
   }
 
@@ -705,7 +708,7 @@
 
 @media (max-width: 992px) {
   
-  .product-essential {
+  .product-essential__wrapper {
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -983,6 +986,9 @@
   .reviews-grid{
     gap: 18px 20px;
     margin-bottom: 22px;
+  }
+  .product-essential__wrapper {
+    gap: 21px;
   }
 }
 
