@@ -155,4 +155,8 @@
   --font-size-18: 1.125rem;
   --font-size-28: 1.75rem;
   --font-size-30: 1.875rem;
+  --color-picker-olive: #4F4631;
+  --color-picker-green: #314F4A;
+  --color-picker-navy: #31344F;
+  --color-hover-overlay: rgba(0, 0, 0, 0.05);
 }
