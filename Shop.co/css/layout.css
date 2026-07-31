@@ -431,16 +431,16 @@
   gap: 10px;
 }
 
-.price-current {
+.product-card__price-box .price-current {
   font-family: var(--font-family-base);
-  font-size: var(--font-size-24);
+  font-size: 24px;
   font-weight: 700;
   color: var(--color-black);
 }
 
-.price-old {
+.product-card__price-box .price-old {
   font-family: var(--font-family-base);
-  font-size: var(--font-size-24);
+  font-size: 24px;
   font-weight: 700;
   color: var(--color-text-price-old);
   text-decoration: line-through;
@@ -1095,8 +1095,8 @@
     margin-bottom: 5px;
   }
 
-  .price-current,
-  .price-old {
+  .product-card__price-box .price-current,
+  .product-card__price-box .price-old {
     font-size: var(--font-size-20);
   }
 
@@ -1527,8 +1527,8 @@
     text-overflow: ellipsis;
   }
 
-  .price-current,
-  .price-old {
+  .product-card__price-box .price-current,
+  .product-card__price-box .price-old {
     font-size: var(--font-size-18);
   }
 

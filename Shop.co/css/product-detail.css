@@ -166,14 +166,14 @@
   margin-bottom: 10px;
 }
 
-.price-current {
+.product-info__price-box .price-current {
   font-family: var(--font-family-base);
   font-size: var(--font-size-32);
   font-weight: 700;
   color: var(--color-text-primary);
 }
 
-.price-old {
+.product-info__price-box .price-old {
   font-family: var(--font-family-base);
   font-size: var(--font-size-32);
   font-weight: 700;
@@ -739,7 +739,7 @@
     margin-bottom: 12px;
   }
 
-  .price-current {
+  .product-info__price-box .price-current {
     font-size: var(--font-size-24);
   }
 
@@ -752,7 +752,7 @@
     font-size: 14px;
   }
 
-  .price-old {
+  .product-info__price-box .price-old {
     font-size: var(--font-size-20);
   }
 
@@ -872,7 +872,7 @@
     gap: 7px;
     margin-bottom: 9px;
   }
-.price-old {
+  .product-info__price-box .price-old {
     font-size: 24px;
   }
   .product-info__price-box {
