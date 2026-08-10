@@ -355,9 +355,24 @@
 
 .category-products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 33px 20px;
   margin-bottom: 28px;
+}
+
+.category-main .product-card {
+  min-width: 0;
+  width: 100%;
+}
+
+@media (min-width: 993px) and (max-width: 1090px) {
+  .category-products-grid {
+    gap: 24px 14px;
+  }
+
+  .category-main .product-card__image-wrapper {
+    padding: 14px;
+  }
 }
 
 .category-main .product-card__rating {
