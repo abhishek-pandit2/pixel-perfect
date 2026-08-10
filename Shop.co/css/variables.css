@@ -97,6 +97,22 @@
   --color-text-muted: rgba(0, 0, 0, 0.6);
   --color-border: rgba(0, 0, 0, 0.1);
 
+  /* Swatch Colors */
+  --color-swatch-green: #00C12B;
+  --color-swatch-red: #F50606;
+  --color-swatch-yellow: #F5DD06;
+  --color-swatch-orange: #F57906;
+  --color-swatch-cyan: #06CAF5;
+  --color-swatch-blue: #063AF5;
+  --color-swatch-purple: #7D06F5;
+  --color-swatch-pink: #F506A4;
+
+  /* UI & Overlay Colors */
+  --color-overlay-bg: rgba(0, 0, 0, 0.4);
+  --color-shadow-black: rgba(0, 0, 0, 0.15);
+  --color-pagination-btn-bg: rgba(0, 0, 0, 0.06);
+  --color-pagination-text: rgba(0, 0, 0, 0.5);
+
   --font-family-heading: 'Integral CF';
   --font-family-base: 'Satoshi';
 

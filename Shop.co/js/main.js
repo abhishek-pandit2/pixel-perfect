@@ -128,4 +128,105 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Category Sort Select Auto-Fit Width
+  const sortSelect = document.querySelector('.sort-by-select');
+  if (sortSelect) {
+    const adjustSelectWidth = () => {
+      const tempSpan = document.createElement('span');
+      tempSpan.style.visibility = 'hidden';
+      tempSpan.style.position = 'absolute';
+      tempSpan.style.fontFamily = window.getComputedStyle(sortSelect).fontFamily;
+      tempSpan.style.fontSize = window.getComputedStyle(sortSelect).fontSize;
+      tempSpan.style.fontWeight = '700';
+      tempSpan.innerText = sortSelect.options[sortSelect.selectedIndex].text;
+      document.body.appendChild(tempSpan);
+      const textWidth = tempSpan.getBoundingClientRect().width;
+      document.body.removeChild(tempSpan);
+      sortSelect.style.width = Math.ceil(textWidth + 20) + 'px';
+    };
+    adjustSelectWidth();
+    sortSelect.addEventListener('change', adjustSelectWidth);
+  }
+
+  // Pagination Numbers Active Toggle
+  const pageNumbers = document.querySelectorAll('.pagination-number');
+  if (pageNumbers.length > 0) {
+    pageNumbers.forEach(num => {
+      num.addEventListener('click', () => {
+        pageNumbers.forEach(n => n.classList.remove('active'));
+        num.classList.add('active');
+      });
+    });
+  }
+
+  // Mobile Filter Drawer / Modal Popup Logic
+  const filterTriggerBtn = document.querySelector('.mobile-filter-trigger-btn');
+  const filterSidebar = document.getElementById('filter-sidebar');
+  const filterOverlay = document.getElementById('filter-sidebar-overlay');
+  const filterCloseBtn = document.querySelector('.filter-sidebar__close-btn');
+  const filterApplyBtn = document.querySelector('.btn-apply-filter');
+
+  const openFilterModal = () => {
+    if (filterSidebar) filterSidebar.classList.add('open');
+    if (filterOverlay) filterOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeFilterModal = () => {
+    if (filterSidebar) filterSidebar.classList.remove('open');
+    if (filterOverlay) filterOverlay.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  if (filterTriggerBtn) filterTriggerBtn.addEventListener('click', openFilterModal);
+  if (filterCloseBtn) filterCloseBtn.addEventListener('click', closeFilterModal);
+  if (filterApplyBtn) filterApplyBtn.addEventListener('click', closeFilterModal);
+  if (filterOverlay) filterOverlay.addEventListener('click', closeFilterModal);
+
+  // Color Swatches Selection Logic
+  const colorSwatches = document.querySelectorAll('.color-swatch-btn');
+  if (colorSwatches.length > 0) {
+    colorSwatches.forEach(btn => {
+      btn.addEventListener('click', () => {
+        colorSwatches.forEach(b => {
+          b.classList.remove('active');
+          b.innerHTML = '';
+        });
+        btn.classList.add('active');
+        btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+      });
+    });
+  }
+
+  // Size Pills Selection Logic
+  const sizePills = document.querySelectorAll('.size-pill-btn');
+  if (sizePills.length > 0) {
+    sizePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        sizePills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+      });
+    });
+  }
+
+  // Filter Group Accordion Toggle Logic
+  const filterHeaders = document.querySelectorAll('.filter-group__header');
+  if (filterHeaders.length > 0) {
+    filterHeaders.forEach(header => {
+      header.addEventListener('click', () => {
+        const groupContent = header.nextElementSibling;
+        const chevron = header.querySelector('.chevron-icon');
+        if (groupContent) {
+          if (groupContent.style.display === 'none') {
+            groupContent.style.display = 'block';
+            if (chevron) chevron.style.transform = 'rotate(0deg)';
+          } else {
+            groupContent.style.display = 'none';
+            if (chevron) chevron.style.transform = 'rotate(180deg)';
+          }
+        }
+      });
+    });
+  }
 });
