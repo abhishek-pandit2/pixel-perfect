@@ -229,4 +229,67 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Cart Items Interaction & Recalculation Logic
+  const cartItems = document.querySelectorAll('.cart-item');
+  const subtotalEl = document.getElementById('summary-subtotal');
+  const discountEl = document.getElementById('summary-discount');
+  const totalEl = document.getElementById('summary-total');
+
+  const updateCartTotals = () => {
+    let subtotal = 0;
+    const currentCartItems = document.querySelectorAll('.cart-item');
+    currentCartItems.forEach(item => {
+      const price = parseFloat(item.getAttribute('data-price')) || 0;
+      const qtyEl = item.querySelector('.cart-quantity-val');
+      const qty = parseInt(qtyEl ? qtyEl.innerText : 1, 10) || 1;
+      subtotal += price * qty;
+    });
+
+    const discount = Math.round(subtotal * 0.20);
+    const delivery = currentCartItems.length > 0 ? 15 : 0;
+    const total = subtotal - discount + delivery;
+
+    if (subtotalEl) subtotalEl.innerText = '$' + subtotal;
+    if (discountEl) discountEl.innerText = '-$' + discount;
+    if (totalEl) totalEl.innerText = '$' + total;
+  };
+
+  if (cartItems.length > 0) {
+    cartItems.forEach(item => {
+      const minusBtn = item.querySelector('.cart-quantity-btn.minus');
+      const plusBtn = item.querySelector('.cart-quantity-btn.plus');
+      const qtyVal = item.querySelector('.cart-quantity-val');
+      const deleteBtn = item.querySelector('.cart-item__delete-btn');
+
+      if (minusBtn && qtyVal) {
+        minusBtn.addEventListener('click', () => {
+          let val = parseInt(qtyVal.innerText, 10) || 1;
+          if (val > 1) {
+            qtyVal.innerText = val - 1;
+            updateCartTotals();
+          }
+        });
+      }
+
+      if (plusBtn && qtyVal) {
+        plusBtn.addEventListener('click', () => {
+          let val = parseInt(qtyVal.innerText, 10) || 1;
+          qtyVal.innerText = val + 1;
+          updateCartTotals();
+        });
+      }
+
+      if (deleteBtn) {
+        deleteBtn.addEventListener('click', () => {
+          const divider = item.nextElementSibling;
+          if (divider && divider.classList.contains('cart-divider')) {
+            divider.remove();
+          }
+          item.remove();
+          updateCartTotals();
+        });
+      }
+    });
+  }
 });

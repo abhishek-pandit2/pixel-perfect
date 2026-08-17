@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SHOP.CO - Your Cart. Review your selected fashion items, quantity, order summary, and checkout.">
+  <title>SHOP.CO | Your Cart</title>
+  <link rel="preconnect" href="https://api.fontshare.com">
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&f[]=cabinet-grotesk@800,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header-group">
+    <div class="announcement-bar" role="region" aria-label="Announcement">
+      <div class="container flex items-center justify-center">
+        <p class="announcement-bar__text">
+          Sign up and get 20% off to your first order.
+          <a href="#signup" class="announcement-bar__link">Sign Up Now</a>
+        </p>
+        <button type="button" class="announcement-bar__close" aria-label="Close announcement">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="site-header">
+      <div class="container nav-container flex items-center justify-between gap-40">
+        <div class="header-left flex items-center">
+          <button type="button" class="mobile-menu-btn" aria-label="Open mobile navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <a href="index.html" class="brand-logo" aria-label="SHOP.CO Homepage">SHOP.CO</a>
+        </div>
+
+        <div class="mobile-menu-overlay" aria-hidden="true"></div>
+        <nav class="main-nav" aria-label="Main Navigation">
+          <button type="button" class="mobile-close-btn" aria-label="Close mobile navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+          <ul class="main-nav__list flex items-center gap-24">
+            <li>
+              <a href="#shop" class="main-nav__link">
+                Shop
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+            </li>
+            <li><a href="#on-sale" class="main-nav__link">On Sale</a></li>
+            <li><a href="#new-arrivals" class="main-nav__link">New Arrivals</a></li>
+            <li><a href="#brands" class="main-nav__link">Brands</a></li>
+          </ul>
+        </nav>
+
+        <form class="header-search" role="search">
+          <label for="header-search-input" class="sr-only">Search for products</label>
+          <input type="search" id="header-search-input" class="header-search__input" placeholder="Search for products...">
+          <svg class="header-search__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </form>
+
+        <div class="header-actions flex items-center gap-14">
+          <a href="cart.html" class="header-action-btn active" aria-label="Shopping Cart">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+          </a>
+          <a href="#profile" class="header-action-btn" aria-label="User Profile">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="9.5"></circle>
+              <circle cx="12" cy="9.2" r="3.2"></circle>
+              <path d="M6.5 17.8c1.1-2.8 3.1-3.6 5.5-3.6s4.4.8 5.5 2.8"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="cart-main">
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <div class="container">
+        <ol class="breadcrumbs__list flex items-center">
+          <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link">Home</a>
+          </li>
+          <li class="breadcrumbs__item" aria-hidden="true">
+            <svg class="breadcrumbs__separator" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </li>
+          <li class="breadcrumbs__item" aria-current="page">
+            <span class="breadcrumbs__current">Cart</span>
+          </li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="cart-section" aria-label="Cart Content Section">
+      <div class="container">
+        <h1 class="cart-title">YOUR CART</h1>
+
+        <div class="cart-layout">
+          <div class="cart-items-card">
+            <div class="cart-item" data-price="145">
+              <div class="cart-item__image-wrapper">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/graphic-tshirt-mobile.png">
+                  <img src="images/graphic-tshirt.png" alt="Gradient Graphic T-shirt" class="cart-item__img">
+                </picture>
+              </div>
+              <div class="cart-item__info">
+                <div class="cart-item__header">
+                  <h2 class="cart-item__title">Gradient Graphic T-shirt</h2>
+                  <button type="button" class="cart-item__delete-btn" aria-label="Remove Gradient Graphic T-shirt from cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="3 6 5 6 21 6"></polyline>
+                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                      <line x1="10" y1="11" x2="10" y2="17"></line>
+                      <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                  </button>
+                </div>
+                <p class="cart-item__spec">Size: <span class="cart-item__spec-val">Large</span></p>
+                <p class="cart-item__spec">Color: <span class="cart-item__spec-val">White</span></p>
+                <div class="cart-item__footer">
+                  <span class="cart-item__price">$145</span>
+                  <div class="cart-item__quantity-selector">
+                    <button type="button" class="cart-quantity-btn minus" aria-label="Decrease quantity">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <span class="cart-quantity-val">1</span>
+                    <button type="button" class="cart-quantity-btn plus" aria-label="Increase quantity">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-divider"></div>
+
+            <div class="cart-item" data-price="180">
+              <div class="cart-item__image-wrapper">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/top-selling-mobile-second.png">
+                  <img src="images/top-selling-second.png" alt="Checkered Shirt" class="cart-item__img">
+                </picture>
+              </div>
+              <div class="cart-item__info">
+                <div class="cart-item__header">
+                  <h2 class="cart-item__title">Checkered Shirt</h2>
+                  <button type="button" class="cart-item__delete-btn" aria-label="Remove Checkered Shirt from cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="3 6 5 6 21 6"></polyline>
+                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                      <line x1="10" y1="11" x2="10" y2="17"></line>
+                      <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                  </button>
+                </div>
+                <p class="cart-item__spec">Size: <span class="cart-item__spec-val">Medium</span></p>
+                <p class="cart-item__spec">Color: <span class="cart-item__spec-val">Red</span></p>
+                <div class="cart-item__footer">
+                  <span class="cart-item__price">$180</span>
+                  <div class="cart-item__quantity-selector">
+                    <button type="button" class="cart-quantity-btn minus" aria-label="Decrease quantity">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <span class="cart-quantity-val">1</span>
+                    <button type="button" class="cart-quantity-btn plus" aria-label="Increase quantity">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cart-divider"></div>
+
+            <div class="cart-item" data-price="240">
+              <div class="cart-item__image-wrapper">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="images/top-selling-mobile-first.png">
+                  <img src="images/top-selling-first.png" alt="Skinny Fit Jeans" class="cart-item__img">
+                </picture>
+              </div>
+              <div class="cart-item__info">
+                <div class="cart-item__header">
+                  <h2 class="cart-item__title">Skinny Fit Jeans</h2>
+                  <button type="button" class="cart-item__delete-btn" aria-label="Remove Skinny Fit Jeans from cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="3 6 5 6 21 6"></polyline>
+                      <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                      <line x1="10" y1="11" x2="10" y2="17"></line>
+                      <line x1="14" y1="11" x2="14" y2="17"></line>
+                    </svg>
+                  </button>
+                </div>
+                <p class="cart-item__spec">Size: <span class="cart-item__spec-val">Large</span></p>
+                <p class="cart-item__spec">Color: <span class="cart-item__spec-val">Blue</span></p>
+                <div class="cart-item__footer">
+                  <span class="cart-item__price">$240</span>
+                  <div class="cart-item__quantity-selector">
+                    <button type="button" class="cart-quantity-btn minus" aria-label="Decrease quantity">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <span class="cart-quantity-val">1</span>
+                    <button type="button" class="cart-quantity-btn plus" aria-label="Increase quantity">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-summary-card">
+            <h2 class="order-summary__title">Order Summary</h2>
+
+            <div class="order-summary__rows">
+              <div class="order-summary__row">
+                <span class="order-summary__label">Subtotal</span>
+                <span class="order-summary__val" id="summary-subtotal">$565</span>
+              </div>
+              <div class="order-summary__row">
+                <span class="order-summary__label">Discount (-20%)</span>
+                <span class="order-summary__val order-summary__val--discount" id="summary-discount">-$113</span>
+              </div>
+              <div class="order-summary__row">
+                <span class="order-summary__label">Delivery Fee</span>
+                <span class="order-summary__val" id="summary-delivery">$15</span>
+              </div>
+            </div>
+
+            <div class="order-summary__divider"></div>
+
+            <div class="order-summary__row order-summary__row--total">
+              <span class="order-summary__label order-summary__label--total">Total</span>
+              <span class="order-summary__total-val" id="summary-total">$467</span>
+            </div>
+
+            <div class="promo-code-group">
+              <div class="promo-code-input-wrapper">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="promo-icon">
+                  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
+                  <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                </svg>
+                <input type="text" class="promo-code-input" placeholder="Add promo code">
+              </div>
+              <button type="button" class="btn-apply-promo">Apply</button>
+            </div>
+
+            <button type="button" class="btn-checkout">
+              Go to Checkout
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="newsletter-wrapper">
+      <div class="container">
+        <div class="newsletter-card">
+          <h2 class="newsletter-title">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+          <form class="newsletter-form" onsubmit="event.preventDefault();">
+            <div class="newsletter-input-group">
+              <svg class="email-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 0, 0, 0.4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+              <label for="newsletter-email" class="sr-only">Email address</label>
+              <input type="email" id="newsletter-email" placeholder="Enter your email address" class="newsletter-input" autocomplete="email" required>
+            </div>
+            <button type="submit" class="btn-subscribe">Subscribe to Newsletter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-logo footer-logo">SHOP.CO</a>
+            <p class="footer-desc">We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+            <div class="footer-socials">
+              <a href="#" class="social-link" aria-label="Twitter">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="social-link active" aria-label="Facebook">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col footer-col--company">
+            <h4 class="footer-col__title">COMPANY</h4>
+            <ul class="footer-nav">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Works</a></li>
+              <li><a href="#">Career</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-col--help">
+            <h4 class="footer-col__title">HELP</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">Delivery Details</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-col--faq">
+            <h4 class="footer-col__title">FAQ</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Account</a></li>
+              <li><a href="#">Manage Deliveries</a></li>
+              <li><a href="#">Orders</a></li>
+              <li><a href="#">Payments</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col footer-col--resources">
+            <h4 class="footer-col__title">RESOURCES</h4>
+            <ul class="footer-nav">
+              <li><a href="#">Free eBooks</a></li>
+              <li><a href="#">Development Tutorial</a></li>
+              <li><a href="#">How to - Blog</a></li>
+              <li><a href="#">Youtube Playlist</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright-text">Shop.co © 2000-2023, All Rights Reserved</p>
+          <div class="payment-methods">
+            <div class="payment-badge" aria-label="Visa">
+              <img src="images/visa.png" alt="Visa" class="payment-badge__img">
+            </div>
+            <div class="payment-badge" aria-label="Mastercard">
+              <img src="images/mastercard.png" alt="Mastercard" class="payment-badge__img">
+            </div>
+            <div class="payment-badge" aria-label="PayPal">
+              <img src="images/paypal.png" alt="PayPal" class="payment-badge__img">
+            </div>
+            <div class="payment-badge" aria-label="Apple Pay">
+              <img src="images/applepay.png" alt="Apple Pay" class="payment-badge__img">
+            </div>
+            <div class="payment-badge" aria-label="Google Pay">
+              <img src="images/gpay.png" alt="Google Pay" class="payment-badge__img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
