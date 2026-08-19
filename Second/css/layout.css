@@ -1,0 +1,32 @@
+/* layout.css */
+
+/* ==========================================================================
+   1. Base & Layout Styles (Mobile-First or Desktop-First base)
+   ========================================================================== */
+
+/* Main layout containers and elements will go here */
+
+
+/* ==========================================================================
+   2. Responsive Breakpoints
+   ========================================================================== */
+
+/* Mobile View (max-width: 767px) */
+@media (max-width: 767px) {
+  
+}
+
+/* Tablet View (min-width: 768px) and (max-width: 992px) */
+@media (min-width: 768px) and (max-width: 992px) {
+  
+}
+
+/* Laptop View (min-width: 993px) and (max-width: 1439px) */
+@media (min-width: 993px) and (max-width: 1439px) {
+  
+}
+
+/* Large Screens (min-width: 1440px) */
+@media (min-width: 1440px) {
+  
+}

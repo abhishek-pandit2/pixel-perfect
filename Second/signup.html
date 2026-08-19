@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign up for Dairy Products. Create your account and order high quality dairy products online.">
+  <title>Dairy Products | Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <div class="signup-page-wrapper">
+    <!-- Header matching design screenshot -->
+    <header class="site-header">
+      <div class="container flex items-center justify-between">
+        <div class="logo">Logo</div>
+        <a href="login.html" class="btn-login">Login</a>
+      </div>
+    </header>
+
+    <!-- Main Content Area with gradient background -->
+    <main id="main-content" class="signup-content flex flex-col items-center grow py-12 px-4">
+      <!-- Title outside the card -->
+      <h1 class="page-title">CREATE AN ACCOUNT !!</h1>
+
+      <!-- Signup Card -->
+      <div class="signup-card">
+        <h2 class="card-subtitle">It's free and only takes a minute</h2>
+        
+        <form class="flex flex-col" id="signup-form">
+          <!-- Username -->
+          <div class="form-group">
+            <label for="username" class="form-label">Username &nbsp; :</label>
+            <input type="text" id="username" name="username" class="form-input" required autocomplete="username">
+          </div>
+          
+          <!-- Email Address -->
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address :</label>
+            <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
+          </div>
+          
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password" class="form-label">Password :</label>
+            <input type="password" id="password" name="password" class="form-input" required autocomplete="new-password">
+          </div>
+          
+          <!-- Phone -->
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone :</label>
+            <input type="tel" id="phone" name="phone" class="form-input" required autocomplete="tel">
+          </div>
+          
+          <!-- Terms Checkbox -->
+          <div class="form-checkbox-group">
+            <input type="checkbox" id="terms" name="terms" class="checkbox-input" required>
+            <label for="terms" class="checkbox-label">I agree to terms and condition</label>
+          </div>
+          
+          <!-- Submit Button -->
+          <button type="submit" class="btn-signup-submit">Sign Up</button>
+        </form>
+      </div>
+      
+      <!-- Footer outside card -->
+      <p class="signup-footer">
+        Already a user ? <a href="login.html" class="signup-footer-link" id="login-link">Login here</a>
+      </p>
+    </main>
+  </div>
+</body>
+</html>

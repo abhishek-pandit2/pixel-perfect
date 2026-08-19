@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Log in to Dairy Products. Access your account and order high quality dairy products online.">
+  <title>Dairy Products | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+
+  <div class="login-page-wrapper">
+    <!-- Header matching design screenshot -->
+    <header class="site-header">
+      <div class="container flex items-center justify-between">
+        <div class="logo">Logo</div>
+        <a href="signup.html" class="btn-login">Sign Up</a>
+      </div>
+    </header>
+
+    <!-- Main Content Area with gradient background -->
+    <main id="main-content" class="login-content flex flex-col items-center grow py-12 px-4">
+      <!-- Title outside the card -->
+      <h1 class="page-title">LOGIN WITH US !!</h1>
+
+      <!-- Login Card -->
+      <div class="login-card">
+        <form class="flex flex-col" id="login-form">
+          <!-- Email Address -->
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address:</label>
+            <input type="email" id="email" name="email" class="form-input" required autocomplete="email">
+          </div>
+          
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" id="password" name="password" class="form-input" required autocomplete="current-password">
+          </div>
+          
+          <!-- Remember me & Forgot Password -->
+          <div class="form-actions-group">
+            <div class="remember-me-group">
+              <input type="checkbox" id="remember" name="remember" class="checkbox-input">
+              <label for="remember" class="checkbox-label">Remember me</label>
+            </div>
+            <a href="#" class="forgot-password-link">Forget Password ?</a>
+          </div>
+          
+          <!-- Submit Button -->
+          <button type="submit" class="btn-login-submit">LOGIN</button>
+        </form>
+      </div>
+      
+      <!-- Footer outside card -->
+      <p class="login-footer">
+        Not yet a <span class="underline-text">member??</span> <a href="signup.html" class="login-footer-link" id="signup-link">Sign Up</a>
+      </p>
+    </main>
+  </div>
+</body>
+</html>
